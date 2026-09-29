@@ -1,0 +1,35 @@
+FINAL QA — AI Presentation Designer v7.4.2-final
+
+Current package verification in this environment:
+- compileall: PASS
+- pre-submission structure/secret/syntax checks: PASS
+- offline smoke (Qwen-format coercion, renderer, audit, PDF/HTML export paths): PASS
+- Docker compose/build: not executed here because Docker CLI/daemon is unavailable
+- live Cloud.ru inference: not executed here because external provider access is not available
+
+Historical test-suite baseline for the code release before documentation/launcher packaging changes:
+- 55 tests collected and passed across isolated groups.
+- The complete `scripts/final_test_suite.py` was not re-run to completion after the final documentation-only/Windows-instruction changes because the environment time limit was reached.
+- Run `python scripts/final_test_suite.py` on the team machine before tagging the final release.
+
+Functional coverage prepared for submission:
+- supplied VK templates: 3
+- layout variants: balanced / columns / editorial
+- showcase: 3 variants on one content package
+- VK matrix for the intermediate showcase: 3 templates × 3 variants = 9 PPTX examples in the separate full-showcase archive
+- native editable PPTX payloads: covered by regression/acceptance tests
+- PDF and HTML exports: covered by smoke/acceptance paths
+- unknown user template path: covered by acceptance script/tests
+- selected audit repair: checkbox selection in UI + selected_issues backend contract
+
+Image modes:
+- retrieval: Openverse with Wikimedia fallback
+- optional text-to-image: Hugging Face Inference Providers adapter
+- if text-to-image is requested without HF_TOKEN, retrieval fallback is used and a warning is surfaced
+
+Environment-dependent checks before submission:
+- run `python scripts/final_test_suite.py` locally
+- optionally run `docker compose up -d --build` if the team wants the Docker release path
+- verify browser behavior on the required desktop browser matrix
+- if the team is in the Top-10 and VK inference is mandatory, configure the organizer-provided VK inference resource
+- publish the repository publicly and create Git tag `v7.4.2-final`

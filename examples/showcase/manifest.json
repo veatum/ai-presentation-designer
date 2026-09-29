@@ -1,0 +1,22 @@
+{
+  "generated_artifacts": [
+    {
+      "file": "presentation_balanced.pptx",
+      "slides": 10,
+      "bytes": 61860,
+      "sha256": "84279384b4ff994c7ee2e9b091c6218fa1d54de4372fde7592d4c562ec93df75"
+    },
+    {
+      "file": "presentation_columns.pptx",
+      "slides": 10,
+      "bytes": 61530,
+      "sha256": "6776b3f6b1b0ef124582cec787e4ad834d6969b71a1fd514d6251ea42dd04373"
+    },
+    {
+      "file": "presentation_editorial.pptx",
+      "slides": 10,
+      "bytes": 61874,
+      "sha256": "5485d2960b265a8a5b1048525147f878caaace4fd1353bb2dd39eb419ae068a6"
+    }
+  ]
+}

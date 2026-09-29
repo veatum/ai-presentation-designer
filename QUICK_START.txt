@@ -1,0 +1,12 @@
+AI Presentation Designer — quick start
+
+Основной путь (Windows/macOS, без Docker):
+1. Установить Python 3.11+ и зависимости.
+2. Скопировать .env.example в .env и указать CLOUD_RU_API_KEY.
+3. Windows: START_WINDOWS.bat; macOS: START.command / START_MAC.sh.
+4. Открыть http://127.0.0.1:8090
+
+Docker — опционально:
+1. cp .env.example .env
+2. docker compose up -d --build
+3. Открыть http://127.0.0.1:8080

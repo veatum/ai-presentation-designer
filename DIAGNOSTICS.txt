@@ -1,0 +1,13 @@
+ДИАГНОСТИКА v7.4.2-final
+
+http://127.0.0.1:8080/api/diagnostics или локальный порт 8090 для START.command.
+
+Диагностика показывает модель, base_url, наличие ключа, LibreOffice и лимиты.
+Содержимое секретов не выводится.
+
+outputs/runs/<run_id> содержит plan/sources/research/results и audit JSON. Эти файлы могут содержать приватный контент и не должны попадать в публичный Git.
+
+Text-to-image:
+- IMAGE_MODE=retrieve — Openverse/Wikimedia;
+- IMAGE_MODE=text_to_image + HF_TOKEN — Hugging Face Inference Providers;
+- при ошибке provider используется retrieval fallback и сохраняется warning.

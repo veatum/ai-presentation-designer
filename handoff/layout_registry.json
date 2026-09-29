@@ -1,0 +1,221 @@
+{
+  "vk_education": {
+    "slide_size": [
+      13.333,
+      7.5
+    ],
+    "layouts": [
+      {
+        "slides": [
+          7
+        ],
+        "layout": "Заголовок",
+        "content_type": "four_text_blocks",
+        "grid": "2x2",
+        "slots": [
+          "title",
+          "card_1",
+          "card_2",
+          "card_3",
+          "card_4"
+        ]
+      },
+      {
+        "slides": [
+          8
+        ],
+        "layout": "Заголовок",
+        "content_type": "six_text_blocks",
+        "grid": "3x2",
+        "slots": [
+          "title",
+          "card_1",
+          "card_2",
+          "card_3",
+          "card_4",
+          "card_5",
+          "card_6"
+        ]
+      },
+      {
+        "slides": [
+          9,
+          10,
+          11
+        ],
+        "layout": "section_divider_variants",
+        "content_type": "section_divider",
+        "slots": [
+          "title",
+          "navigation_dots",
+          "decorative_pattern"
+        ]
+      }
+    ]
+  },
+  "vk_tech": {
+    "slide_size": [
+      10.0,
+      5.625
+    ],
+    "layouts": [
+      {
+        "slides": [
+          7
+        ],
+        "layout": "1_Содержание",
+        "content_type": "image_plus_6_vertical_items",
+        "slots": [
+          "title",
+          "hero_image",
+          "item_1",
+          "item_2",
+          "item_3",
+          "item_4",
+          "item_5",
+          "item_6"
+        ]
+      },
+      {
+        "slides": [
+          8
+        ],
+        "layout": "2_Содержание",
+        "content_type": "image_plus_5_horizontal_items",
+        "slots": [
+          "title",
+          "hero_image",
+          "item_1",
+          "item_2",
+          "item_3",
+          "item_4",
+          "item_5"
+        ]
+      },
+      {
+        "slides": [
+          9
+        ],
+        "layout": "3_Содержание",
+        "content_type": "image_plus_content_list",
+        "slots": [
+          "title",
+          "image",
+          "content_heading",
+          "content_list"
+        ]
+      },
+      {
+        "slides": [
+          10
+        ],
+        "layout": "1_Визитка",
+        "content_type": "profile_photo_left",
+        "slots": [
+          "title",
+          "photo",
+          "name",
+          "role",
+          "five_point_list"
+        ]
+      },
+      {
+        "slides": [
+          11
+        ],
+        "layout": "4_Визитка",
+        "content_type": "profile_photo_right",
+        "slots": [
+          "name",
+          "role",
+          "four_point_list",
+          "photo"
+        ]
+      }
+    ]
+  },
+  "vk_workspace": {
+    "slide_size": [
+      13.333,
+      7.5
+    ],
+    "layouts": [
+      {
+        "slides": [
+          7
+        ],
+        "layout": "13_Титульный слайд",
+        "content_type": "six_cards_3x2",
+        "slots": [
+          "title",
+          "card_1",
+          "card_2",
+          "card_3",
+          "card_4",
+          "card_5",
+          "card_6"
+        ]
+      },
+      {
+        "slides": [
+          8
+        ],
+        "layout": "13_Титульный слайд",
+        "content_type": "six_numbered_blocks_3x2",
+        "slots": [
+          "title",
+          "block_1",
+          "block_2",
+          "block_3",
+          "block_4",
+          "block_5",
+          "block_6"
+        ]
+      },
+      {
+        "slides": [
+          9
+        ],
+        "layout": "13_Титульный слайд",
+        "content_type": "eight_cards_4x2",
+        "slots": [
+          "title",
+          "card_1",
+          "card_2",
+          "card_3",
+          "card_4",
+          "card_5",
+          "card_6",
+          "card_7",
+          "card_8"
+        ]
+      },
+      {
+        "slides": [
+          10
+        ],
+        "layout": "19_Заголовок",
+        "content_type": "three_wide_cards",
+        "slots": [
+          "title",
+          "card_1",
+          "card_2",
+          "card_3"
+        ]
+      },
+      {
+        "slides": [
+          11
+        ],
+        "layout": "15_Титульный слайд",
+        "content_type": "three_columns_four_items",
+        "slots": [
+          "title",
+          "column_1",
+          "column_2",
+          "column_3"
+        ]
+      }
+    ]
+  }
+}

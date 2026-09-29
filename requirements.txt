@@ -1,0 +1,16 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9
+python-dotenv>=1.0
+openai>=1.66
+python-pptx>=1.0.0
+Pillow>=10.0
+PyMuPDF>=1.24
+pypdf>=5.0
+python-docx>=1.1
+
+requests>=2.32
+
+pydantic>=2.10,<3
+
+huggingface_hub>=0.34,<1.0

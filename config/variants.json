@@ -1,0 +1,14 @@
+{
+  "compact": {
+    "description": "Shorter copy, fewer text blocks, simpler composition",
+    "prefer_two_column": false
+  },
+  "balanced": {
+    "description": "Default balance of text and visual structure",
+    "prefer_two_column": true
+  },
+  "visual": {
+    "description": "More visual separation and charts where supported",
+    "prefer_two_column": true
+  }
+}
