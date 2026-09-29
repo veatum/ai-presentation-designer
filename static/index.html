@@ -104,5 +104,12 @@ async function repairSelected(){const selected=selectedIssues();if(!lastRun||!se
 $('generate').onclick=generate;
 $('imageMode').onchange=()=>{$('includeImages').checked=true};
 </script>
+<script>
+if (location.hostname.endsWith('.github.io') || new URLSearchParams(location.search).get('demo') === '1') {
+  const demoScript = document.createElement('script');
+  demoScript.src = location.pathname.endsWith('/static/index.html') ? 'pages-demo.js' : 'static/pages-demo.js';
+  document.body.append(demoScript);
+}
+</script>
 </body>
 </html>
