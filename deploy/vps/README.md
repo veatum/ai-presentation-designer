@@ -8,9 +8,10 @@ LibreOffice PDF export. GitHub Pages remains a separate static demo.
 - Ubuntu 24.04; source checkout: `/opt/presentation-designer/src`.
 - Docker Compose project: `presentation-designer`.
 - Environment secrets: `/etc/presentation-designer/app.env` (root only).
-- Nginx Basic Auth credentials: `/etc/presentation-designer/htpasswd`.
+- Saved Nginx Basic Auth credentials: `/etc/presentation-designer/htpasswd` (currently inactive).
 - Public URL: `https://139.100.239.187`.
-- Nginx terminates TLS and authenticates every application request.
+- Nginx terminates TLS. Access is temporarily public for hackathon judging,
+  as requested by the owner; generation and editing do not require a password.
 - The application listens only on host loopback, `127.0.0.1:8080`.
 - Generated files are stored in Docker volume `presentation-designer_presentations`.
 - Docker starts on boot; the application uses `restart: unless-stopped`.
@@ -39,6 +40,17 @@ Edit `app.env` on the VPS to change the Cloud.ru key, then run `up -d` again.
 Do not commit real keys, passwords or certificate private keys to Git.
 To change the website password, run `htpasswd /etc/presentation-designer/htpasswd sheikh`.
 
+## Restore password access after the hackathon
+
+Uncomment `auth_basic` and `auth_basic_user_file` in `deploy/vps/nginx.conf`,
+copy it to `/etc/nginx/sites-available/presentation-designer`, then run
+`nginx -t && systemctl reload nginx`. The existing password file is preserved.
+Also restore the password notice in the root README and Pages demo link.
+
+The temporary public mode has no per-visitor generation quota or spending cap.
+The existing single-job lock, input limits, HTTPS and loopback-only application
+port remain in effect. Access is not automatically closed at a scheduled time.
+
 ## TLS without a domain
 
 Certbot 5.8.0 is installed in `/opt/certbot`. Let's Encrypt issues an IP
@@ -57,8 +69,9 @@ certificate paths in that file, validate with `nginx -t`, then reload Nginx.
 
 ## Deployment verification (2026-09-29)
 
-The public HTTPS endpoint passed certificate validation and returned 401 without
-credentials. Authenticated health, interface and diagnostics requests succeeded.
+During the initial password-protected deployment, the HTTPS endpoint passed
+certificate validation and returned 401 without credentials. Authenticated
+health, interface and diagnostics requests succeeded.
 One real Cloud.ru generation of three slides across all three built-in templates
 and three layouts produced nine PPTX and nine PDF files in 75 seconds.
 The downloaded bundle was checked for valid PPTX containers with three slides
